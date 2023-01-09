@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pad</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav> 
+	<div id="wave-padx">
+		<div id="logo">Wave - Pad</div>
+	</div>
+</nav>
+<main id="main">
+	<div id="container "class="container glow">
+		<div id="wrapper" class="wrapper" >
+			<div id="form" class="form">
+				<div id="item-1" class="item-default item-1">
+					<button id="pad1" class="button-default button1 pad"><span> 1</span></button>
+				</div>
+				<div class="item-default item-2">
+				
+					<button id="pad2" class="button-default button2 pad"><span> 2</span></button>
+				</div>
+				<div class="item-default item-3">
+					<button id="pad3" class="button-default button3 pad"><span> 3</span></button>
+				</div>
+				<div class="item-default item-4">
+					<button id="pad4" class="button-default button4 pad"><span> 4</span></button>
+				</div>
+				<div class="item-default item-5">
+					<button id="drum1" class="button-default button5 drum"><span> q</span></button>
+				</div>
+				<div class="item-default item-6">
+					<button id="drum2" class="button-default button6 drum"><span> w</span></button>
+				</div>
+				<div class="item-default item-7">
+					<button id="drum3" class="button-default button7 drum"><span> e</span></button>
+				</div>
+				<div class="item-default item-8">
+					<button id="drum4" class="button-default button8 drum"><span> r</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="bass1" class="button-default button9 bass"><span>a</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="bass2" class="button-default button10 bass"><span>s</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="bass3" class="button-default button11 bass"><span>d</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="bass4" class="button-default button12 bass"><span>f</span></button>
+				</div>
+	
+				<div class="item-default item-9">
+					<button id="fx1" class="button-default button13 fx"><span>z</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="fx2" class="button-default button14 fx"><span>x</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="fx3" class="button-default button15 fx"><span>c</span></button>
+				</div>
+				<div class="item-default item-9">
+					<button id="fx4" class="button-default button16 fx"><span>v</span></button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="controls" id="controls">
+		<div id="control-heading" class="control-heading">[ Pad Samples ]</div>
+		<section id="pad-section" class="pad-section section">
+			
+			<div id="pad1-sound" class="sound pad-sound">
+				<div class="control-item-header">Pad1-Sample</div>
+				<div class="pad1-heading"></div>
+				<select name="music" id="pad1List" class="list padList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="pad1-player" class="player" loop>
+				<source  id="pad1-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="pad1-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumePad1(this.value)" 
+				onchange="thisVolumePad1(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			<div id="pad2-sound" class="sound pad-sound">
+				<div class="control-item-header">Pad2-Sample</div>
+				<select name="music" id="pad2List" class="list padList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="pad2-player" class="player" loop>
+				<source  id="pad2-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="pad2-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100"   
+				step="1" 
+				oninput="thisVolumePad2(this.value)" 
+				onchange="thisVolumePad2(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+	
+			<div id="pad3-sound" class="sound pad-sound">
+				<div class="control-item-header">pad3-Sample</div>
+				<select name="music" id="pad3List" class="list padList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="pad3-player" class="player" loop>
+				<source  id="pad3-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="pad3-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumePad3(this.value)" 
+				onchange="thisVolumePad3(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			
+			<div id="pad4-sound" class="sound pad-sound">
+				<div class="control-item-header">pad4-Sample</div>
+				<select name="music" id="pad4List" class="list padList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="pad4-player" class="player" loop>
+				<source  id="pad4-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="pad4-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumePad4(this.value)" 
+				onchange="thisVolumePad4(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+		</section>
+		
+		<section  id="drum-section" class="drum-section section">
+			
+			<div id="drum1-sound" class="sound drum-sound">
+				<div class="control-item-header">drum1-Sample</div>
+				<div class="drum1-heading"></div>
+				<select name="music" id="drum1List" class="list drum-list">
+					<option data-value="sounds/drum/drum1/sample808.wav">Sound-1</option>
+					<option data-value="sounds/drum/drum1/audio1.wav">Sound-2</option>
+				</select>    
+				<audio id="drum1-player" class="player" >
+				<source  id="drum1-audioSource" class="audioSource" src="sounds/drum/drum1/sample808.wav"/>
+				</audio>
+	
+				<input id="drum1-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumedrum1(this.value)" 
+				onchange="thisVolumedrum1(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			<div id="drum2-sound" class="sound drum-sound">
+				<div class="control-item-header">drum2-Sample</div>
+				<select name="music" id="drum2List" class="list drum-list">
+					<option data-value="sounds/drum/drum2/snare1.wav">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="drum2-player" class="player" >
+				<source  id="drum2-audioSource" class="audioSource" src="sounds/drum/drum2/snare1.wav"/>
+				</audio>
+	
+				<input id="drum2-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100"   
+				step="1" 
+				oninput="thisVolumedrum2(this.value)" 
+				onchange="thisVolumedrum2(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+	
+			<div id="drum3-sound" class="sound drum-sound">
+				<div class="control-item-header">drum3-Sample</div>
+				<select name="music" id="drum3List" class="list drum-list">
+					<option data-value="sounds/drum/drum2/snare1.wav">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="drum3-player" class="player" >
+				<source  id="drum3-audioSource" class="audioSource" src="sounds/drum/drum2/snare1.wav"/>
+				</audio>
+	
+				<input id="drum3-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumedrum3(this.value)" 
+				onchange="thisVolumedrum3(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			
+			<div id="drum4-sound" class="sound drum-sound">
+				<div class="control-item-header">drum4-Sample</div>
+				<select name="music" id="drum4List" class="list drum-list">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="sounds/drum/drum1/audio1.wav">Sound-2</option>
+				</select>    
+				<audio id="drum4-player" class="player" >
+				<source  id="drum4-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="drum4-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumedrum4(this.value)" 
+				onchange="thisVolumedrum4(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+		</section>
+		
+		<section  id="bass-section" class="bass-section section">
+			
+			<div id="bass1-sound" class="sound bass-sound">
+				<div class="control-item-header">bass1-Sample</div>
+				<div class="bass1-heading"></div>
+				<select name="music" id="bass1List" class="list bassList">
+					<option data-value="sounds/bass/bass1/bass1.wav">Sound-1</option>
+					<option data-value="sounds/bass/bass1/bass2.wav">Sound-2</option>
+					<option data-value="sounds/bass/bass1/bass3.wav">Sound-3</option>
+				</select>    
+				<audio id="bass1-player" class="player">
+				<source  id="bass1-audioSource" class="audioSource" src="sounds/bass/bass1/bass1.wav"/>
+				</audio>
+	
+				<input id="bass1-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumebass1(this.value)" 
+				onchange="thisVolumebass1(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			<div id="bass2-sound" class="sound bass-sound">
+				<div class="control-item-header">bass2-Sample</div>
+				<select name="music" id="bass2List" class="list bassList">
+					<option data-value="sounds/bass/bass2/bass1.wav">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="bass2-player" class="player">
+				<source  id="bass2-audioSource" class="audioSource" src="sounds/bass/bass2/bass1.wav"/>
+				</audio>
+	
+				<input id="bass2-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100"   
+				step="1" 
+				oninput="thisVolumebass2(this.value)" 
+				onchange="thisVolumebass2(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+	
+			<div id="bass3-sound" class="sound bass-sound">
+				<div class="control-item-header">bass3-Sample</div>
+				<select name="music" id="bass3List" class="list bassList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="bass3-player" class="player" >
+				<source  id="bass3-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="bass3-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumebass3(this.value)" 
+				onchange="thisVolumebass3(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			
+			<div id="bass4-sound" class="sound bass-sound">
+				<div class="control-item-header">bass4-Sample</div>
+				<select name="music" id="bass4List" class="list bassList">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="bass4-player" class="player" >
+				<source  id="bass4-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="bass4-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumebass4(this.value)" 
+				onchange="thisVolumebass4(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+		</section>
+		
+		<section  id="fx-section" class="fx-section section">
+			
+			<div id="fx1-sound" class="sound fx-sound">
+				<div class="control-item-header">fx1-Sample</div>
+				<div class="fx1-heading"></div>
+				<select name="music" id="fx1List" class="list fx-list">
+					<option data-value="sounds/fx/chordsc/chords-1.wav">chords-1</option>
+					<option data-value="sounds/fx/fx1/chords-2.wav">Sound-2</option>
+					<option data-value="sounds/fx/fx1/chords-3.wav">Sound-3</option>
+				</select>    
+				<audio id="fx1-player" class="player" fx>
+				<source  id="fx1-audioSource" class="audioSource" src="sounds/fx/chords/chords-1.wav"/>
+				</audio>
+	
+				<input id="fx1-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumefx1(this.value)" 
+				onchange="thisVolumefx1(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			<div id="fx2-sound" class="sound fx-sound">
+				<div class="control-item-header">fx2-Sample</div>
+				<select name="music" id="fx2List" class="list fx-list">
+					<option data-value="sounds/fx/chrods/chords-2.wav">chords-2</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="fx2-player" class="player" fx>
+				<source  id="fx2-audioSource" class="audioSource" src="sounds/fx/chords/chords-2.wav"/>
+				</audio>
+	
+				<input id="fx2-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100"   
+				step="1" 
+				oninput="thisVolumefx2(this.value)" 
+				onchange="thisVolumefx2(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+	
+			<div id="fx3-sound" class="sound fx-sound">
+				<div class="control-item-header">fx3-Sample</div>
+				<select name="music" id="fx3List" class="list fx-list">
+					<option data-value="sounds/fx/chords/chords-3.wav">chords-3</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="fx3-player" class="player" fx>
+				<source  id="fx3-audioSource" class="audioSource" src="sounds/fx/chords/chords-3.wav"/>
+				</audio>
+	
+				<input id="fx3-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumefx3(this.value)" 
+				onchange="thisVolumefx3(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+			
+			<div id="fx4-sound" class="sound fx-sound">
+				<div class="control-item-header">fx4-Sample</div>
+				<select name="music" id="fx4List" class="list fx-list">
+					<option data-value="./audio.mp3">Sound-1</option>
+					<option data-value="./audio2.mp3">Sound-2</option>
+				</select>    
+				<audio id="fx4-player" class="player" fx>
+				<source  id="fx4-audioSource" class="audioSource" src="audio.mp3"/>
+				</audio>
+	
+				<input id="fx4-vol-control" class="vol-control"
+				type="range" 
+				min="0" 
+				max="100" 
+				step="1" 
+				oninput="thisVolumefx4(this.value)" 
+				onchange="thisVolumefx4(this.value)">Volume</input>
+				<!-- <div id="vol">50</div> --> 
+			</div>
+		</section>
+		<div class="switch" id="switch">
+			<button class="switches" id="switch1" value="swtich1">pad</button>
+			<button class="switches" id="switch2" value="swtich2">drums</button>
+			<button class="switches" id="switch3" value="swtich3">bass</button>
+			<button class="switches" id="switch4" value="swtich4">fx</button>
+		</div>
+		
+	</div>
+</main>
+<footer>
+	<div class="explain-app">
+		<p class="heading-footer">This section provide a brief overview of the app and its main features.</p>
+		<div class="overview">
+			<p>
+				My app, called "Wave - Pad",  is a digital music production tool. 
+				With an intuitive interface and easy-to-use controls, users can create
+				beats, melodies, and full songs with just a few taps.
+			</p>
+			<p>
+				The app features a grid of pads that can be triggered to play different sounds,
+				 such as drums, synths, and samples. Users can choose from a variety of pre-loaded 
+				 sounds to create unique tracks. The app also includes volume controls to help users 
+				 shape and manipulate their sounds.
+			</p>
+		</div>
+		<div class="manual">How to use the app.</div>
+		<ul class="features">
+			<li class="features-items">
+				🟦🟩🟥🟪👈🏻 Open the app and familiarize yourself with the main screen, 
+				which consists of a grid of pads and a menu at the right side or bottom, 
+				according to screen size. 
+			</li>
+			<li class="features-items">
+				📑 🎶 From the menu bar, select "Sounds" to access the sound library and choose
+				the sounds you want to use in your music. 
+			</li>
+		</ul>
+		
+
+	</div>
+	<div id="social-heading">My Social-Links</div>
+	<div class="social-links">
+		
+		<a href="https://www.facebook.com/profile.php?id=100076325714987" class="fa fa-facebook"></a>
+		<a href="https://www.instagram.com/l3xu_5/" class="fa fa-instagram"></a>
+		<a href="https://www.linkedin.com/in/lanchenba-singha-7137a9249/" class="fa fa-linkedin"></a>
+		<a href="https://github.com/Lanchenba-bot" class="fa fa-github"></a>
+		
+
+	</div>
+	<div id="developer">Design and Developed by <a href="https://lanchenba-bot.github.io/Portfolio/#home">Lanchenba Singha</a></div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
